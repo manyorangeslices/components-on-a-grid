@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+
 }
 
 *,
@@ -15,4 +16,76 @@ img {
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  background-colour: #f2f1ed;
+  margin: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo {
+  display: grid;
+  grid-column: 1/ 2;
+  grid-row: 1;
+  z-index: auto;
+  width: 14rem;
+}
+
+li {
+  list-style-type:none;
+}
+
+nav {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 1rem;
+  display: grid;
+}
+
+.pano {
+  display: grid;
+  grid-column: 1/ -1;
+  grid-row: 1;
+  padding: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+}
+
+h2 {
+  font-family: "Patua One", sans-serif;
+  color: #30658d;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+figure:nth-child(1) {
+  margin-right: .5rem;
+}
+
+figure:nth-child(2) {
+  margin-left: .5rem;
+}
+
+a {
+  font-size: 2rem;
+  font-family: "Patua One", sans-serif;
 }
