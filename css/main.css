@@ -1,66 +1,54 @@
 html {
   box-sizing: border-box;
-
+  line-height: 1.5;
+  font-family: Georgia, serif;
 }
 
 *,
 *::before,
-*::after {
+::after {
   box-sizing: inherit;
+}
+
+.logo {
+  max-width: 14rem;
+  z-index: 1;
+  grid-row: 2;
+  display: flex;
+  margin: 2rem;
+  grid-column: 1;
 }
 
 img {
   width: 100%;
+  display: grid;
 }
 
 header {
-  /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
+  display: grid;
+  grid-template-columns: 25% 25% 1fr;
+  grid-template-rows: 1fr 10rem;
 }
 
 body {
   display: grid;
-  grid-template-rows: 1fr 1fr;
   gap: 1rem;
-  background-colour: #f2f1ed;
+  background-color: #f2f1ed;
   margin: 0;
-  grid-template-columns: 1fr 1fr;
-}
-
-.logo {
-  display: grid;
-  grid-column: 1/ 2;
-  grid-row: 1;
-  z-index: auto;
-  width: 14rem;
-}
-
-li {
-  list-style-type:none;
-}
-
-nav {
-  grid-column: 2;
-  grid-row: 1;
-  margin-top: 1rem;
-  display: grid;
-}
-
-.pano {
-  display: grid;
-  grid-column: 1/ -1;
-  grid-row: 1;
-  padding: 1rem;
 }
 
 li {
   list-style-type: none;
+  font-size: 2rem;
+  font-family: "Patua One", sans-serif;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 1rem;
+  margin-top: 0;
 }
 
 h2 {
@@ -85,7 +73,38 @@ figure:nth-child(2) {
   margin-left: .5rem;
 }
 
+.pano {
+  display: grid;
+  grid-column: 1/ -1;
+  grid-row: 1 / 4;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
 a {
-  font-size: 2rem;
-  font-family: "Patua One", sans-serif;
+  color: #fff;
+}
+
+nav {
+  grid-column: 3;
+  grid-row: 1;
+  margin-top: 1rem;
+  display: grid;
+}
+
+ul {
+  display: grid;
+  grid-template-areas: "1 2 3";
+}
+
+ul:nth-child(1) {
+  grid-area: 1;
+}
+
+ul:nth-child(2) {
+  grid-area: 2;
+}
+
+ul:nth-child(3) {
+  grid-area: 3;
 }
